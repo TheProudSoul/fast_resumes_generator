@@ -86,7 +86,12 @@ devMiddleware.waitUntilValid(() => {
 })
 
 var server = app.listen(port)
-
+app.use('/', function (req, res, next) {
+  res.send("user")
+});
+app.use('/src/resume/left-right', function (req, res, next) {
+  res.send("user")
+});
 module.exports = {
   ready: readyPromise,
   close: () => {

@@ -13,7 +13,8 @@
       </div>
       <div class="text">
         <ul>
-          <li> {{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</li>
+          <li> {{ lang.born }} {{person.birth.year}} {{ lang.year }}</li>
+          <li> {{ lang.bornIn }} {{person.birth.location}}</li>
         </ul>
       </div>
     </div>
@@ -94,7 +95,7 @@
 
   <div class="rightCol">
     <div class="title">
-      <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
+      <h2>{{person.name.first}}{{person.name.last}}</h2>
       <div>{{person.position}}</div>
     </div>
 
@@ -132,7 +133,7 @@ export default Vue.component(name, getVueOptions(name));
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .resume {
-  font-family:'Roboto' !important;
+  font-family:'Microsoft Yahei' !important;
   background:#cccccc;
 }
 a {
@@ -163,7 +164,8 @@ a {
     padding-top:0;
     margin-top:0;
     letter-spacing:10px;
-    font-weight:400;
+    font-weight:700;
+    font-size : 40px;
   }
   div {
     margin-top:-5px;
@@ -254,7 +256,7 @@ h4 {
   opacity:1;
 }
 .rightCol {
-  width:63.5%;
+  width:68%;
   height:100%;
   float:right;
   display:flex;
@@ -332,7 +334,7 @@ h4 {
   }
 }
 .leftCol {
-  width:35%;
+  width:30%;
   height:100%;
   float:left;
   padding:0;
